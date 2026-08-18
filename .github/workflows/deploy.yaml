@@ -33,7 +33,6 @@ jobs:
   
   test:
     name: Run tests
-    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: code
