@@ -75,7 +75,9 @@ jobs:
         if: ${{ env.SONAR_STATUS == 'ERROR' }}
         run: echo "Problemas de seguridad encontrados..."
 
-  security-SYNK:
+  security-SNYK:
+    name: Snyk image Scan
+    needs: build
     runs-on: ubuntu-latest
     steps:
     - name: Run Snyk to check Docker image for vulnerabilities
